@@ -40,21 +40,21 @@ export function Interface() {
             variants={itemVariants}
             className="text-7xl font-bold mb-4 glow-text bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-red-500"
           >
-            John Doe
+            Hey! I'm CODER KID
           </motion.h1>
           <motion.p 
             variants={itemVariants}
             className="text-2xl text-gray-300 mb-8 animate-float"
           >
-            Full Stack Developer & 3D Enthusiast
+            Full Stack Developer & Cybersecurity Aspirant
           </motion.p>
           <motion.div 
             variants={itemVariants}
             className="flex justify-center space-x-6"
           >
-            <SocialLink href="https://github.com" icon={<Github />} />
-            <SocialLink href="https://linkedin.com" icon={<Linkedin />} />
-            <SocialLink href="mailto:email@example.com" icon={<Mail />} />
+            <SocialLink href="https://github.com/0CODERKID" icon={<Github />} />
+            <SocialLink href="https://www.linkedin.com/in/coder-kid-8516721b9/" icon={<Linkedin />} />
+            <SocialLink href="mailto:theunlisted07@gmail.com" icon={<Mail />} />
             <SocialLink href="/resume.pdf" icon={<FileCode2 />} />
           </motion.div>
         </motion.div>
@@ -71,8 +71,7 @@ export function Interface() {
           <h2 className="text-5xl font-bold mb-6 glow-text">About Me</h2>
           <div className="rgb-border p-8 backdrop-blur-lg">
             <p className="text-xl text-gray-300 leading-relaxed">
-              I'm a passionate developer with expertise in React, Three.js, and modern web technologies.
-              I love creating immersive 3D experiences and beautiful user interfaces.
+            A Fullstack Web Dev with interests in Cybersecurity, AI and Robotics
             </p>
           </div>
         </motion.div>
