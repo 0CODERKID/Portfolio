@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: #050816;
+  color: white;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.rgb-border {
+  --border-width: 3px;
+  --animation-speed: 3s;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.rgb-border:hover {
+  transform: scale(1.02);
+}
+
+.rgb-border::before {
+  content: '';
+  position: absolute;
+  top: -150%;
+  left: -50%;
+  width: 300%;
+  height: 300%;
+  background: conic-gradient(
+    from 0deg,
+    #ff0000,
+    #ff00ff,
+    #0000ff,
+    #00ffff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  animation: rotate var(--animation-speed) linear infinite;
+  z-index: -1;
+}
+
+.rgb-border::after {
+  content: '';
+  position: absolute;
+  inset: var(--border-width);
+  background: rgba(26, 26, 26, 0.9);
+  border-radius: 0.75rem;
+  z-index: -1;
+  backdrop-filter: blur(20px);
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.glow-text {
+  animation: glow 2s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #fff,
+                 0 0 30px #ff00ff,
+                 0 0 40px #ff00ff,
+                 0 0 50px #ff00ff,
+                 0 0 60px #ff00ff;
+  }
+  to {
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #00ffff,
+                 0 0 30px #00ffff,
+                 0 0 40px #00ffff,
+                 0 0 50px #00ffff;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
